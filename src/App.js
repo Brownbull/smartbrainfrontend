@@ -103,8 +103,8 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    fetch('https://radiant-ocean-79324.herokuapp.com/imageurl', {
-    // fetch('https://pure-inlet-46062.herokuapp.com/imageurl', {
+    // fetch('https://radiant-ocean-79324.herokuapp.com/imageurl', {
+    fetch('https://pure-inlet-46062.herokuapp.com/imageurl', {
     // fetch('http://localhost:3000/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
@@ -115,8 +115,8 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch('https://radiant-ocean-79324.herokuapp.com/image', {
-        // fetch('https://pure-inlet-46062.herokuapp.com/image', {
+        // fetch('https://radiant-ocean-79324.herokuapp.com/image', {
+        fetch('https://pure-inlet-46062.herokuapp.com/image', {
         // fetch('http://localhost:3000/image', {
           method: 'put',
           headers: { 'Content-Type': 'application/json' },
